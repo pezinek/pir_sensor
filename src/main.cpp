@@ -24,7 +24,6 @@ HomieNode ledNode("led", "switch");
 HomieNode pirNode("pir", "sensor");
 HomieNode photocellNode("photocell", "sensor");
 
-
 void updateLed() {
   if (brightness == 0) {
     led_on = false;
@@ -77,20 +76,21 @@ void photocellLoopHandler() {
 
   if ((now - photocell_reading_interval_start) >= PHOTOCELL_READING_INTERVAL) {
       float lux = photocell.getCurrentLux();
+
       float luxdiff = (lux - photocell_last_value);
       float pdiff = 100 * (luxdiff / photocell_last_value);
-
       bool quick_update = false;
       if ((abs(luxdiff) > 1.0) and (abs(pdiff) > PHOTOCELL_TOLERANCE)) {
         quick_update = true;
       }
 
+      /*
       Serial.print("Lux: ");
       Serial.print(lux);
       Serial.print(" (");
       Serial.print(pdiff);
       Serial.println(" %)");
-
+      */
 
       if (((now - photocell_report_interval_start) >= photocell_report_interval) or quick_update) {
           photocellNode.setProperty("lux").send(String(lux));
