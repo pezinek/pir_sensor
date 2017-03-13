@@ -2,17 +2,32 @@
 WiFi PIR Sensor/Luxmeter for ESP8266
 ====================================
 
-This is simple PIR sensor and luxmeter controlled over MQTT.
+This is firmware for simple wireless PIR sensor and luxmeter controlled over MQTT.
 It uses the [Homie MQTT convention](https://github.com/marvinroger/homie)
-and is based on [Homie implementation for ESP8266](https://github.com/marvinroger/homie-esp8266) by Marvin Roger.
+and is based on [Homie implementation for ESP8266](https://github.com/marvinroger/homie-esp8266) by Marvin Roger,
+benefiting from all the features this library provides, like:
+[captive web portal for initial configuration](https://https://homie-esp8266.readme.io/docs/ui-bundle),
+[OTA updates over MQTT](https://homie-esp8266.readme.io/docs/ota-configuration-updates#section-ota-updates),
+[WiFi reconfiguration over MQTT ](https://homie-esp8266.readme.io/docs/ota-configuration-updates#section-configuration-updates)
+etc.
+
+Parts
+-----
+
+- [Wemos D1 Mini](https://www.aliexpress.com/wholesale?catId=0&initiative_id=AS_20170313030458&SearchText=wemos+d1+mini)
+- PIR module [HC-SR501](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030335&SearchText=HC-SR501)
+- Photocell [GL5528](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030456&SearchText=GL5528)
+
+... or something similar :-)
 
 Wiring
 ------
 
-photocell goes to A0
-and the PIR sensor to D5
+- photocell goes to A0
+- PIR sensor goes to D5
 
 ![wiring](doc/pir_sensor_bb.jpg)
+
 
 Instalation
 -----------
