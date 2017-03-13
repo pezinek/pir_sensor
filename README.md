@@ -30,10 +30,10 @@ Wiring
 ![wiring](doc/pir_sensor_bb.jpg)
 
 
-Instalation
------------
+Setup
+-----
 
-Import into [platformio](http://platformio.org/), then run build target "PlatformIO: Upload SPIFFS Image".
+Import this code into [platformio](http://platformio.org/), then run build target "PlatformIO: Upload SPIFFS Image".
 
 Adjust the photocell type, and resistor value in the code in [src/main.cpp](src/main.cpp#L5)
 to match whatever you have.
