@@ -17,6 +17,7 @@ Parts
 - [Wemos D1 Mini](https://www.aliexpress.com/wholesale?catId=0&initiative_id=AS_20170313030458&SearchText=wemos+d1+mini)
 - PIR module [HC-SR501](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030335&SearchText=HC-SR501)
 - Photocell [GL5528](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030456&SearchText=GL5528)
+- 15K Resistor (or whatever other you like)
 
 ... or something similar :-)
 
@@ -34,7 +35,7 @@ Instalation
 
 Import into [platformio](http://platformio.org/), then run build target "PlatformIO: Upload SPIFFS Image".
 
-Adjust the photocell type in the code in [src/main.cpp](src/main.cpp#L5)
+Adjust the photocell type, and resistor value in the code in [src/main.cpp](src/main.cpp#L5)
 to match whatever you have.
 (You may need to follow the instructions for the [Arduino Light Dependent Resistor Library](https://github.com/QuentinCG/Arduino-Light-Dependent-Resistor-Library/)
 if your photocell is not supported by the library directly)

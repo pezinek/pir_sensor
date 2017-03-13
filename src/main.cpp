@@ -2,13 +2,17 @@
 #include <Homie.h>
 #include <LightDependentResistor.h>
 
+// Adjust these two based on your HW
 #define PHOTOCELL_TYPE LightDependentResistor::GL5528
+#define PHOTOCELL_RESISTOR 15000 /*ohm*/
+
 #define LED_PIN LED_BUILTIN
 #define PIR_PIN D5
 #define PHOTOCELL_PIN A0
-#define PHOTOCELL_RESISTOR 15000 /*ohm*/
+
 #define PHOTOCELL_TOLERANCE 15 /* % */
 #define PHOTOCELL_READING_INTERVAL 100 /* ms */
+
 
 int brightness = PWMRANGE;
 bool led_on = false;
