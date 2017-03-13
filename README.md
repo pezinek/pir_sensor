@@ -12,7 +12,7 @@ Wiring
 photocell goes to A0
 and the PIR sensor to D5
 
-![wiring](doc/pir_sensor_bb.svg)
+![wiring](doc/pir_sensor_bb.jpg)
 
 Instalation
 -----------
