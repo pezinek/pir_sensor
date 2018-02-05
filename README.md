@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/pezinek/pir_sensor.svg?branch=master)](https://travis-ci.org/pezinek/pir_sensor)
+
 WiFi PIR Sensor/Luxmeter for ESP8266
 ====================================
 
