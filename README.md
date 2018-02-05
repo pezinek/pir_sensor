@@ -15,7 +15,9 @@ Parts
 -----
 
 - [Wemos D1 Mini](https://www.aliexpress.com/wholesale?catId=0&initiative_id=AS_20170313030458&SearchText=wemos+d1+mini)
-- PIR module [HC-SR501](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030335&SearchText=HC-SR501)
+- PIR module [HC-SR501](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030335&SearchText=HC-SR501) 
+(actually this module triggers randomly when WiFI is on, I'm actually planning to replace it with 
+[AM312](https://www.aliexpress.com/item/Mini-IR-Pyroelectric-Infrared-PIR-Motion-Human-Sensor-Automatic-Detector-Module-high-reliability-12mm-x-25mm/32749737125.html?spm=2114.13010608.0.0.SCUcKl) )
 - Photocell [GL5528](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170313030456&SearchText=GL5528)
 - 15K Resistor (or whatever other you like)
 
