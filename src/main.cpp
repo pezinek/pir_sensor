@@ -5,6 +5,7 @@
 // Adjust these two based on your HW
 #define PHOTOCELL_TYPE LightDependentResistor::GL5528
 #define PHOTOCELL_RESISTOR 15000 /*ohm*/
+//#define PHOTOCELL_RESISTOR 21700 /*ohm*/
 
 #define LED_PIN LED_BUILTIN
 #define PIR_PIN D5
@@ -80,6 +81,7 @@ void photocellLoopHandler() {
 
   if ((now - photocell_reading_interval_start) >= PHOTOCELL_READING_INTERVAL) {
       float lux = photocell.getCurrentLux();
+      int raw = analogRead(PHOTOCELL_PIN);
 
       float luxdiff = (lux - photocell_last_value);
       float pdiff = 100 * (luxdiff / photocell_last_value);
@@ -96,8 +98,13 @@ void photocellLoopHandler() {
       Serial.println(" %)");
       */
 
+      if (quick_update) {
+          photocellNode.setProperty("lux").send(String(photocell_last_value));
+      }
+
       if (((now - photocell_report_interval_start) >= photocell_report_interval) or quick_update) {
           photocellNode.setProperty("lux").send(String(lux));
+          photocellNode.setProperty("raw").send(String(raw));
           photocell_last_value = lux;
           photocell_report_interval_start = now;
       }
@@ -131,6 +138,8 @@ void setupHandler() {
 
   photocellNode.setProperty("interval").send(String(photocell_report_interval/1000));
   photocellNode.setProperty("lux").send(String(photocell_last_value));
+  photocellNode.setProperty("raw").send(String(analogRead(PHOTOCELL_PIN)));
+
 }
 
 void setup() {

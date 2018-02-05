@@ -43,7 +43,7 @@ if your photocell is not supported by the library directly)
 Then you could compile and upload the sketch to your board as usual.
 
 Once you upload the sketch, you have to configure the node as described in
-[Homie Getting Started Tutorial](https://homie-esp8266.readme.io/docs/getting-started)
+[Homie Getting Started Tutorial](http://marvinroger.github.io/homie-esp8266/docs/develop/quickstart/getting-started/)
 (this is where you device gets device id assigned)
 
 Interface
